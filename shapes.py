@@ -7,7 +7,7 @@ class Shape:
         The base Shape class always returns the string "Shape".
         Subclasses (like Square) will override this method.
         """
-        pass
+        return "Shape"
 
 class Square(Shape):
     def name(self):
@@ -16,7 +16,7 @@ class Square(Shape):
         Because this is a Square, it must return the string "Square".
         This demonstrates polymorphism: same method name, different behavior.
         """
-        pass
+        return "Square"
 
 class Circle:
     def __init__(self, radius):
@@ -25,7 +25,9 @@ class Circle:
         It must be stored in an instance variable called self.radius.
         The tests check that the radius is stored correctly.
         """
-        pass
+        self.radius = radius
+    
+        
 
     def area(self):
         """
@@ -34,7 +36,8 @@ class Circle:
         VERY important: use self.radius, not just 'radius',
         because radius is not a local variable.
         """
-        pass
+        area = math.pi * self.radius * self.radius
+        return area
 
 class Rectangle:
     def __init__(self, width, height):
@@ -45,7 +48,8 @@ class Rectangle:
         - self.height
         The tests check that these are stored correctly.
         """
-        pass
+        self.width = width
+        self.height = height
 
     def area(self):
         """
@@ -53,4 +57,5 @@ class Rectangle:
         Formula: width × height.
         The tests expect this exact calculation.
         """
-        pass
+        area = self.width * self.height
+        return area

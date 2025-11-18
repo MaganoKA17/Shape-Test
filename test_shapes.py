@@ -1,4 +1,6 @@
 import unittest
+from shapes import Square, Circle, Rectangle
+import math
 
 class TestShapes(unittest.TestCase):
 
